@@ -6,4 +6,4 @@ In past bootcamps I have built web applications and backend services using PHP o
 
 ## Broilerplate Environment Setup
 
-To setup from scratch, [visit the pure broilerplate](https://github.com/rb-thompson/flask-broiler-plate) here.
+To setup from scratch, [visit the pure broilerplate](https://github.com/rb-thompson/flask-broiler-plate).
