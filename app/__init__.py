@@ -4,7 +4,7 @@ from .config import Config
 # from .api import api_bp
 # from .web import web_bp
 
-# Create a Flask app with configuration and extensions
+# Create Flask app with configuration and extensions
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
