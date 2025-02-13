@@ -19,11 +19,7 @@ venv\Scripts\activate
 
 4. Include project packages: `pip freeze > requirements.txt`
 
-5. Create a `app`, `tests` folders
-
-6. Inside `app/`, create `api`, `extensions`, `models`, `repositories`, `services`, `static`, `templates`, `utils`, and `web` folders
-
-7. Use a **modular file structure**:
+5. Use a **modular file structure**:
 ```
 project/
 │
@@ -82,7 +78,9 @@ project/
 └── README.md                # Important App information
 ```
 
+6. Customizable for scaling python web projects. 
 
 ## DRY Principles
 
+Reuses service and repository logic, avoiding duplication.
 
