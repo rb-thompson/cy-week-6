@@ -19,7 +19,7 @@ venv\Scripts\activate
 
 4. Include project packages: `pip freeze > requirements.txt`
 
-5. Use a **modular file structure**:
+5. Layer application using a **modular file structure**:
 ```
 project/
 │
@@ -30,6 +30,10 @@ project/
 │   │
 │   ├── models/              # Database models (SQLAlchemy)
 │   │   ├── __init__.py
+│   │   └── user_repository.py
+│   │
+│   ├── repositories/        # Data access layer (e.g., SQLAlchemy queries)
+│   │   ├── __init__.py
 │   │   ├── user.py
 │   │   └── post.py
 │   │
@@ -38,10 +42,14 @@ project/
 │   │   ├── user_service.py
 │   │   └── post_service.py
 │   │
-│   ├── api/                 # REST API routes (Blueprint)
+│   ├── api/                 # REST API (Blueprint)
 │   │   ├── __init__.py
-│   │   ├── routes.py
-│   │   └── schemas.py       # Request/response validation (e.g., Marshmallow)
+│   │   ├── v1/              # Versioned API
+│   │   │   ├── routes.py
+│   │   │   └── schemas.py   # Request/response validation (e.g., Marshmallow)
+│   │   └── v2/              # Future API versions
+│   │       ├── routes.py
+│   │       └── schemas.py
 │   │
 │   ├── web/                 # Web routes (Blueprint for HTML templates)
 │   │   ├── __init__.py
@@ -59,7 +67,7 @@ project/
 │   │
 │   ├── static/              # Static files (CSS, JS, images)
 │   │   ├── css/
-│   │   ├── js/
+│   │   ├── scripts/
 │   │   └── images/
 │   │
 │   └── utils/               # Shared utilities (e.g., helpers, custom decorators)
